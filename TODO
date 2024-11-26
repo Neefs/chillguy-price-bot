@@ -1,0 +1,16 @@
+run: 
+npm init -y
+npm i discord.js grep glob
+
+put these scripts in package.json
+{
+    "clean": "del /s /q build",
+    "build": "tsc --build",
+    "start": "npm run clean && npm run build && node build/index.js",
+    "startNoClean": "npm run build && node build/index.js"
+}
+
+change .def.gitignore to .gitignore
+
+npm i mongoose 
+uncomment mongoose lines in customclient for database connection
